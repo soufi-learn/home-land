@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,12 +9,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Image
-        src="/images/backdrop.svg"
-        width={500}
-        height={300}
-        className="w-full fixed top-0 right-0 pointer-events-none -z-10"
-      />
     </>
   );
 }
