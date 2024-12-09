@@ -1,9 +1,10 @@
 import "../styles/global.css";
+import Header from "../components/Header";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <header>this is header</header>
+      <Header />
       <Component {...pageProps} />
       <footer>this is footer</footer>
     </>

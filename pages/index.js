@@ -14,7 +14,7 @@ export default function Home() {
         src="/images/backdrop.svg"
         width={500}
         height={300}
-        className="w-full fixed top-0 right-0"
+        className="w-full fixed top-0 right-0 pointer-events-none -z-10"
       />
     </>
   );
