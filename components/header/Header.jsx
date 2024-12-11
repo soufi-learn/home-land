@@ -2,17 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Header = () => {
+const Header = ({ children }) => {
   const router = useRouter();
 
   const isActiveLink = (href) => {
-    console.log(router.asPath);
-    return router.asPath === href ? true : false;
+    return router.pathname === href ? true : false;
   };
 
   return (
     <header>
-      <div className=" w-[90%] bg-gradient-to-b from-blue-600 to-blue-200 rounded-t-[3rem] h-[95vh] mt-6 md:mt-10 mx-auto relative">
+      <div className=" w-[90%] bg-gradient-to-b from-blue-600 to-transparent rounded-t-[3rem] mt-6 min-h-screen md:mt-10 mx-auto relative">
         <nav className="py-5 px-20 ">
           <ul className="border-b border-white py-4 flex items-center gap-8">
             <li>
@@ -65,16 +64,19 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
         {/* header image */}
-        <Image
-          src="/images/header-home.png"
-          width={500}
-          height={300}
-          alt="building"
-          className="w-full absolute top-0 h-full pointer-events-none"
-          priority
-        />
+        {router.pathname === "/" && (
+          <Image
+            src="/images/header-home.png"
+            width={500}
+            height={300}
+            alt="building"
+            className="w-full h-[630px] object-cover top-0  pointer-events-none opacity-90"
+            priority
+          />
+        )}
+
+        {children}
       </div>
 
       {/* line backdrop */}

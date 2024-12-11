@@ -11,8 +11,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      {!is404Page && <Header />}
-      <Component {...pageProps} />
+      {!is404Page && (
+        <Header>
+          <Component {...pageProps} />
+        </Header>
+      )}
+
       {!is404Page && <Footer />}
     </>
   );
