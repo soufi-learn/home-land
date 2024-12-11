@@ -6,12 +6,13 @@ const Header = () => {
   const router = useRouter();
 
   const isActiveLink = (href) => {
+    console.log(router.asPath);
     return router.asPath === href ? true : false;
   };
 
   return (
     <header>
-      <div className=" w-[90%] bg-gradient-to-b from-blue-500 to-blue-200 rounded-t-[3rem] h-[95vh] mt-6 md:mt-10 mx-auto relative">
+      <div className=" w-[90%] bg-gradient-to-b from-blue-600 to-blue-200 rounded-t-[3rem] h-[95vh] mt-6 md:mt-10 mx-auto relative">
         <nav className="py-5 px-20 ">
           <ul className="border-b border-white py-4 flex items-center gap-8">
             <li>
@@ -34,19 +35,31 @@ const Header = () => {
 
             <li>
               <Link
-                href="#"
-                className={`text-white ${isActiveLink ? "text-red-400" : null}`}
+                href="/"
+                className={`text-blue-200 ${
+                  isActiveLink("/") ? "!text-white" : null
+                }`}
               >
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/love" className="text-white">
+              <Link
+                href="/samples"
+                className={`text-blue-200 ${
+                  isActiveLink("/samples") ? "!text-white" : null
+                }`}
+              >
                 Samples
               </Link>
             </li>
             <li>
-              <Link href="/love" className="text-white">
+              <Link
+                href="/gallery"
+                className={`text-blue-200 ${
+                  isActiveLink("/gallery") ? "!text-white" : null
+                }`}
+              >
                 Gallery
               </Link>
             </li>
