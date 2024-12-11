@@ -1,12 +1,19 @@
 import "../styles/global.css";
-import Header from "../components/Header";
+import { useRouter } from "next/router";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  // Check if the current path is '/404'
+  const is404Page = router.pathname === "/404";
+
   return (
     <>
-      <Header />
+      {!is404Page && <Header />}
       <Component {...pageProps} />
-      <footer>this is footer</footer>
+      {!is404Page && <Footer />}
     </>
   );
 }
