@@ -9,12 +9,7 @@ const Header = () => {
             <li>
               <a href="#" className="flex items-center gap-2">
                 {/* Logo */}
-                <Image
-                  src="/images/logo.png"
-                  width={24}
-                  height={24}
-                  className=""
-                />
+                <Image src="/images/logo.svg" width={24} height={24} />
                 <span className="font-bold text-white leading-none">
                   Home
                   <br />
