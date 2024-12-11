@@ -1,15 +1,29 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+
+  const isActiveLink = (href) => {
+    return router.asPath === href ? true : false;
+  };
+
   return (
     <header>
       <div className=" w-[90%] bg-gradient-to-b from-blue-500 to-blue-200 rounded-t-[3rem] h-[95vh] mt-6 md:mt-10 mx-auto relative">
         <nav className="py-5 px-20 ">
-          <ul className="border-b border-white py-4">
+          <ul className="border-b border-white py-4 flex items-center gap-8">
             <li>
               <a href="#" className="flex items-center gap-2">
                 {/* Logo */}
-                <Image src="/images/logo.svg" width={24} height={24} />
+                <Image
+                  src="/images/logo.svg"
+                  alt="logo"
+                  width={24}
+                  height={24}
+                  priority
+                />
                 <span className="font-bold text-white leading-none">
                   Home
                   <br />
@@ -19,7 +33,22 @@ const Header = () => {
             </li>
 
             <li>
-              <a href="#"></a>
+              <Link
+                href="#"
+                className={`text-white ${isActiveLink ? "text-red-400" : null}`}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/love" className="text-white">
+                Samples
+              </Link>
+            </li>
+            <li>
+              <Link href="/love" className="text-white">
+                Gallery
+              </Link>
             </li>
           </ul>
         </nav>
@@ -29,7 +58,9 @@ const Header = () => {
           src="/images/header-home.png"
           width={500}
           height={300}
-          className="w-full absolute top-0 h-full"
+          alt="building"
+          className="w-full absolute top-0 h-full pointer-events-none"
+          priority
         />
       </div>
 
@@ -38,6 +69,7 @@ const Header = () => {
         src="/images/backdrop.svg"
         width={500}
         height={300}
+        alt="backdrop"
         className="w-full fixed top-0 right-0 pointer-events-none -z-10"
       />
     </header>
