@@ -15,7 +15,7 @@ const Header = ({ children }) => {
         <nav className="py-5 px-20 ">
           <ul className="border-b border-white py-4 flex items-center gap-8">
             <li>
-              <a href="#" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2">
                 {/* Logo */}
                 <Image
                   src="/images/logo.svg"
@@ -29,7 +29,7 @@ const Header = ({ children }) => {
                   <br />
                   Land
                 </span>
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -71,7 +71,7 @@ const Header = ({ children }) => {
             width={500}
             height={300}
             alt="building"
-            className="w-full h-[630px] object-cover top-0  pointer-events-none opacity-90"
+            className="w-full h-[595px] object-cover top-0  pointer-events-none opacity-90"
             priority
           />
         )}

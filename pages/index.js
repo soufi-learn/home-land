@@ -1,3 +1,4 @@
+import HomesList from "@/components/homes/HomesList";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/images/logo.svg" />
       </Head>
       <h1>Welcome To Home Page</h1>
+      <HomesList />
     </>
   );
 }
