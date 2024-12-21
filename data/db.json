@@ -2,56 +2,56 @@
   "homes": [
     {
       "id": 1,
-      "title": "خانه ویلایی",
+      "title": "villa house",
       "roomCount": 8,
       "img": "/images/img-1.jfif",
       "price": 120000
     },
     {
       "id": 2,
-      "title": "خانه ویلایی",
+      "title": "apartment",
       "roomCount": 9,
       "img": "/images/img-2.jfif",
       "price": 220000
     },
     {
       "id": 3,
-      "title": "خانه ویلایی",
+      "title": "Suite",
       "roomCount": 2,
       "img": "/images/img-3.jfif",
       "price": 320000
     },
     {
       "id": 4,
-      "title": "خانه ویلایی",
+      "title": "villa house",
       "roomCount": 5,
       "img": "/images/img-4.jfif",
       "price": 420000
     },
     {
       "id": 5,
-      "title": "خانه ویلایی",
+      "title": "rented home",
       "roomCount": 18,
       "img": "/images/img-5.jfif",
       "price": 520000
     },
     {
       "id": 6,
-      "title": "خانه ویلایی",
+      "title": "villa house",
       "roomCount": 4,
       "img": "/images/img-6.jfif",
       "price": 620000
     },
     {
       "id": 7,
-      "title": "خانه ویلایی",
+      "title": "Suite",
       "roomCount": 3,
       "img": "/images/img-7.jfif",
       "price": 720000
     },
     {
       "id": 8,
-      "title": "خانه ویلایی",
+      "title": "rented home",
       "roomCount": 12,
       "img": "/images/img-8.jfif",
       "price": 820000

@@ -71,7 +71,7 @@ const Header = ({ children }) => {
             width={500}
             height={300}
             alt="building"
-            className="w-full h-[595px] object-cover top-0  pointer-events-none opacity-90"
+            className="w-full h-[630px] object-cover top-0  pointer-events-none opacity-90"
             priority
           />
         )}
