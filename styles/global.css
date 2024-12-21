@@ -6,4 +6,43 @@
   body {
     background: #5d97d5;
   }
+  /* Typography Styles */
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@layer components {
 }

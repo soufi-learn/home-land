@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Typewriter from "typewriter-effect";
 
 const Header = ({ children }) => {
   const router = useRouter();
@@ -66,14 +67,38 @@ const Header = ({ children }) => {
         </nav>
         {/* header image */}
         {router.pathname === "/" && (
-          <Image
-            src="/images/header-home.png"
-            width={500}
-            height={300}
-            alt="building"
-            className="w-full h-[630px] object-cover top-0  pointer-events-none opacity-90"
-            priority
-          />
+          <>
+            <h1 className="absolute top-52 left-1/2 -translate-x-1/2 text-[4rem] text-white">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Home Land Project")
+                    .callFunction(() => {
+                      console.log("String typed out!");
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log("All strings were deleted");
+                    })
+                    .start();
+                }}
+                options={{
+                  loop: true,
+                  delay: 100,
+                }}
+              />
+            </h1>
+
+            <Image
+              src="/images/header-home.png"
+              width={500}
+              height={300}
+              alt="building"
+              className="w-full h-[630px] object-cover top-0  pointer-events-none opacity-90"
+              priority
+            />
+          </>
         )}
 
         {children}

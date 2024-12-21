@@ -9,13 +9,13 @@ const Home = ({ title, roomCount, img, price }) => {
         alt={title}
         width={500}
         height={300}
-        className=" transition-all duration-700 hover:scale-110 cursor-pointer"
+        className="transition-all duration-700 hover:scale-110 cursor-pointer"
       />
       <div className="bg-white p-2 absolute bottom-0 right-0 flex justify-between items-center left-0">
-        <h2 className="flex  items-center gap-2">
+        <h4 className="flex  items-center gap-2">
           <FcHome />
           {title}
-        </h2>
+        </h4>
         <div className="flex flex-col">
           <span>room: {roomCount}</span>
           <span>price: {price}</span>
