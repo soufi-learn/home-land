@@ -12,7 +12,7 @@ const Header = ({ children }) => {
 
   return (
     <header>
-      <div className=" w-[90%] bg-gradient-to-b from-blue-600 to-transparent rounded-t-[3rem] mt-6 min-h-screen md:mt-10 mx-auto relative">
+      <div className="w-full md:w-[90%] bg-gradient-to-b from-blue-600 to-transparent rounded-t-[3rem] mt-6 min-h-screen md:mt-10 mx-auto relative">
         <nav className="py-5 px-20 ">
           <ul className="border-b border-white py-4 flex items-center gap-8">
             <li>
