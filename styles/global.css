@@ -5,8 +5,17 @@
 @layer base {
   body {
     background: #5d97d5;
+    font-family: varela;
   }
-  /* Typography Styles */
+
+  @font-face {
+    font-family: "varela";
+    src: url("../pages/fonts/varela-round.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Heading Styles */
   h1 {
     font-size: 2.25rem;
     font-weight: 700;
