@@ -63,6 +63,16 @@ const Header = ({ children }) => {
                 Gallery
               </Link>
             </li>
+            <li>
+              <Link
+                href="/estate-list"
+                className={`text-blue-200 ${
+                  isActiveLink("/estate-list") ? "!text-white" : null
+                }`}
+              >
+                Homes
+              </Link>
+            </li>
           </ul>
         </nav>
         {/* header image */}
