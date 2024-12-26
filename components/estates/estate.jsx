@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FcHome } from "react-icons/fc";
 
-const Home = ({ title, roomCount, img, price }) => {
+const Estate = ({ title, roomCount, img, price }) => {
   return (
     <>
       <div className="p-3 bg-white rounded-xl overflow-hidden relative pb-14">
@@ -32,4 +32,4 @@ const Home = ({ title, roomCount, img, price }) => {
   );
 };
 
-export default Home;
+export default Estate;

@@ -68,7 +68,7 @@ const Header = ({ children }) => {
         {/* header image */}
         {router.pathname === "/" && (
           <>
-            <h1 className="absolute top-52 left-1/2 -translate-x-1/2 text-[4rem] text-white">
+            <h1 className="absolute top-52 left-1/2 -translate-x-1/2 lg:text-[3rem] xl:text-[4rem] w-full text-center text-white">
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
