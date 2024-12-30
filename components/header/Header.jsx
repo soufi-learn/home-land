@@ -45,16 +45,6 @@ const Header = ({ children }) => {
             </li>
             <li>
               <Link
-                href="/samples"
-                className={`text-blue-200 ${
-                  isActiveLink("/samples") ? "!text-white" : null
-                }`}
-              >
-                Samples
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/gallery"
                 className={`text-blue-200 ${
                   isActiveLink("/gallery") ? "!text-white" : null
