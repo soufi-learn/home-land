@@ -10,19 +10,19 @@ const SingleEstate = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="container pt-6 px-10">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex">
         {/* Image Section */}
-        <div className="relative">
+        <div className="relative w-2/5">
           <img
             src={home.img}
             alt={home.title}
-            className="w-full h-[700px] object-cover object-center"
+            className="w-full  object-cover object-center"
           />
         </div>
 
         {/* Content Section */}
-        <div className="p-6">
+        <div className="p-6 w-3/5">
           {/* Title and Price */}
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-semibold text-gray-800">
