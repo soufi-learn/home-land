@@ -36,6 +36,9 @@ function EstateList() {
           <Estate key={home.id} {...home} />
         ))}
       </div>
+      {!homes.length && (
+        <h3 className="text-white mt-10 text-center">Home Not Found!</h3>
+      )}
     </div>
   );
 }
