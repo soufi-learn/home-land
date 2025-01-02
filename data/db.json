@@ -5,56 +5,67 @@
       "title": "villa house",
       "roomCount": 8,
       "img": "/images/img-1.jfif",
-      "price": 120000
+      "price": 120000,
+      "meterage": 980000
     },
     {
       "id": 2,
-      "title": "apartment",
-      "roomCount": 9,
-      "img": "/images/img-2.jfif",
-      "price": 220000
-    },
-    {
-      "id": 3,
       "title": "Suite",
       "roomCount": 2,
       "img": "/images/img-3.jfif",
-      "price": 320000
-    },
-    {
-      "id": 4,
-      "title": "villa house",
-      "roomCount": 5,
-      "img": "/images/img-4.jfif",
-      "price": 420000
-    },
-    {
-      "id": 5,
-      "title": "rented home",
-      "roomCount": 18,
-      "img": "/images/img-5.jfif",
-      "price": 520000
+      "price": 320000,
+      "meterage": 567400
     },
     {
       "id": 6,
       "title": "villa house",
-      "roomCount": 4,
-      "img": "/images/img-6.jfif",
-      "price": 620000
+      "roomCount": 5,
+      "img": "/images/img-4.jfif",
+      "price": 420000,
+      "meterage": 87000
     },
     {
-      "id": 7,
-      "title": "Suite",
-      "roomCount": 3,
-      "img": "/images/img-7.jfif",
-      "price": 720000
+      "id": 3,
+      "title": "rented home",
+      "roomCount": 18,
+      "img": "/images/img-5.jfif",
+      "price": 520000,
+      "meterage": 120000
     },
+
     {
-      "id": 8,
+      "id": 4,
       "title": "rented home",
       "roomCount": 12,
       "img": "/images/img-8.jfif",
-      "price": 820000
+      "price": 820000,
+      "meterage": 120000
+    },
+    {
+      "id": 5,
+      "title": "villa house",
+      "roomCount": 4,
+      "img": "/images/img-6.jfif",
+      "price": 620000,
+      "meterage": 580000
+    },
+
+    {
+      "id": 7,
+      "title": "apartment",
+      "roomCount": 9,
+      "img": "/images/img-2.jfif",
+      "price": 220000,
+      "meterage": 120000
+    },
+
+    {
+      "id": 8,
+      "title": "Suite",
+      "roomCount": 3,
+      "img": "/images/img-7.jfif",
+      "price": 720000,
+      "meterage": 120000
     }
   ]
 }

@@ -1,10 +1,11 @@
 import data from "../../data/db.json";
 import Estate from "../../components/estates/estate";
 import { useEffect, useState } from "react";
+import { DevBundlerService } from "next/dist/server/lib/dev-bundler-service";
 
 function EstateList() {
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("");
+  const [sort, setSort] = useState("-1");
   const [homes, setHomes] = useState(data.homes);
 
   useEffect(() => {
@@ -13,6 +14,36 @@ function EstateList() {
     );
     setHomes(newHomes);
   }, [search]);
+
+  useEffect(() => {
+    switch (sort) {
+      case "price": {
+        const newHomes = [...homes].sort((a, b) => a.price - b.price);
+        setHomes(newHomes);
+        break;
+      }
+
+      case "room-count": {
+        const newHomes = [...homes].sort((a, b) => a.roomCount - b.roomCount);
+        setHomes(newHomes);
+        break;
+      }
+      case "meterage": {
+        const newHomes = [...homes].sort((a, b) => a.meterage - b.meterage);
+        console.log("meterage");
+        setHomes(newHomes);
+        break;
+      }
+      default: {
+        if (search) {
+          setHomes([...homes]);
+        } else {
+          setHomes([...data.homes]);
+        }
+        break;
+      }
+    }
+  }, [sort]);
 
   return (
     <div className="mx-10 mt-10">
@@ -32,13 +63,12 @@ function EstateList() {
 
           <select
             defaultValue={sort}
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 outline-none"
+            onChange={(e) => setSort(e.target.value)}
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 outline-none"
           >
-            <option value="-1" selected>
-              sort homes
-            </option>
+            <option value="-1">sort homes</option>
             <option value="price">By Price</option>
-            <option value="rom-count">By room count</option>
+            <option value="room-count">By room count</option>
             <option value="meterage">By Meterage</option>
           </select>
         </div>
