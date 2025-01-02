@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FcHome } from "react-icons/fc";
 
 const Estate = ({ id, title, roomCount, img, price }) => {
   return (
@@ -16,7 +15,6 @@ const Estate = ({ id, title, roomCount, img, price }) => {
         <div className="absolute bottom-0 right-0 left-0 p-2 bg-white flex justify-between items-center">
           <div>
             <h4 className="flex  items-center gap-2 md:text-lg xl:text-xl">
-              <FcHome className="md:hidden xl:block" />
               {title}
             </h4>
             <span>price: $ {price.toLocaleString()}</span>
