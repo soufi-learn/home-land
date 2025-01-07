@@ -45,6 +45,10 @@ function EstateList() {
     }
   }, [sort]);
 
+  const paginateHandler = (e, page) => {
+    e.preventDefault();
+    console.log(page);
+  };
   return (
     <div className="mx-10 mt-10">
       <div className="flex justify-between items-center mb-4">
@@ -82,6 +86,21 @@ function EstateList() {
       {!homes.length && (
         <h3 className="text-white mt-10 text-center">Home Not Found!</h3>
       )}
+
+      <div className="flex mt-10 justify-center gap-4">
+        {Array.from({ length: Math.ceil(homes.length / 3) }).map(
+          (item, index) => (
+            <a
+              key={index}
+              href="#"
+              onClick={(e) => paginateHandler(e, index + 1)}
+              className="flex items-center justify-center px-4 h-9  font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-900"
+            >
+              {index + 1}
+            </a>
+          )
+        )}
+      </div>
     </div>
   );
 }
