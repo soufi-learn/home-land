@@ -1,12 +1,12 @@
 import data from "../../data/db.json";
 import Estate from "../../components/estates/estate";
 import { useEffect, useState } from "react";
-import { DevBundlerService } from "next/dist/server/lib/dev-bundler-service";
 
 function EstateList() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("-1");
   const [homes, setHomes] = useState(data.homes);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const newHomes = data.homes.filter((home) =>
@@ -47,7 +47,13 @@ function EstateList() {
 
   const paginateHandler = (e, page) => {
     e.preventDefault();
-    console.log(page);
+    setPage(page);
+
+    let endIndex = 3 * page;
+    let startIndex = endIndex - 3;
+
+    let paginatedHomes = data.homes.slice(startIndex, endIndex);
+    setHomes(paginatedHomes);
   };
   return (
     <div className="mx-10 mt-10">
@@ -88,13 +94,17 @@ function EstateList() {
       )}
 
       <div className="flex mt-10 justify-center gap-4">
-        {Array.from({ length: Math.ceil(homes.length / 3) }).map(
+        {Array.from({ length: Math.ceil(data.homes.length / 3) }).map(
           (item, index) => (
             <a
               key={index}
               href="#"
               onClick={(e) => paginateHandler(e, index + 1)}
-              className="flex items-center justify-center px-4 h-9  font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-900"
+              className={` ${
+                page === index + 1
+                  ? "bg-gray-700 text-white"
+                  : "hover:bg-gray-100 hover:text-gray-900"
+              } flex items-center justify-center px-4 h-9  font-medium text-gray-700 bg-white border border-gray-300 rounded-lg  `}
             >
               {index + 1}
             </a>
